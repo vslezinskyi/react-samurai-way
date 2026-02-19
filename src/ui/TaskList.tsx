@@ -1,6 +1,6 @@
 import TaskItem from "./TaskItem";
-import {useTasks} from "../bll/useTasks.tsx";
-import styles from './TaskList.module.css'
+import { useTasks } from "../bll/useTasks.tsx";
+import styles from "./TaskList.module.css";
 
 type Props = {
   onTaskSelected: (id: string | null) => void;
@@ -32,9 +32,11 @@ const TasksList = ({ onTaskSelected, onBoardId, selectedTaskId }: Props) => {
   return (
     <>
       <div>
-        <button className={styles.button} onClick={handleResetClick}>Reset</button>
+        <button className={styles.button} onClick={handleResetClick}>
+          Reset
+        </button>
         <hr />
-        <ul className='tasks'>
+        <ul className="tasks">
           {tasks.map((task) => (
             <TaskItem
               key={task.id}
@@ -47,6 +49,7 @@ const TasksList = ({ onTaskSelected, onBoardId, selectedTaskId }: Props) => {
       </div>
     </>
   );
+  
 };
 
 export default TasksList;
