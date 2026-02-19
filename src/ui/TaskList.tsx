@@ -49,7 +49,6 @@ const TasksList = ({ onTaskSelected, onBoardId, selectedTaskId }: Props) => {
       </div>
     </>
   );
-  
 };
 
 export default TasksList;
